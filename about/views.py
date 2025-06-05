@@ -8,18 +8,19 @@ from .forms import CollaborateForm
 
 def about_me(request):
     """
-    Display an individual :model:`blog.About`.
+    Renders the mos recent information on the website author 
+    and allows user collaboration requests.
+    Displays an individual instance of :model:`blog.About`.
 
     **Context**
-
     ``about``
-        An instance of :model:`blog.About`.
+        An instance of :model:`about.About`.
+    ``collaborate_form``
+        An instance of :form:`about.CollaborateForm`. 
 
     **Template:**
-
-    :template:`blog/about.html`
+    :template:`about/about.html`
     """
-
 
     if request.method == "POST":
         collaborate_form = CollaborateForm(data=request.POST)
