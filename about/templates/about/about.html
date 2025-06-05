@@ -8,9 +8,9 @@
     <div class="row">
         <div class="col-4 text-center">
             {% if "placeholder" in about.profile_image.url %}
-            <img class="card-img-top" src="{% static 'images/nobody.jpg' %}" alt="placeholder image" width="75%">
+            <img class="card-img-top" src="{% static 'images/nobody.jpg' %}" alt="placeholder image" class="profile_image">
             {% else %}
-            <img class="card-img-top" src=" {{ about.profile_image.url }}" alt="{{ about.title }}" width="75%">
+            <img class="card-img-top" src=" {{ about.profile_image.url }}" alt="{{ about.title }}" class="profile_image">
             {% endif %}
         </div>
         <div class="col-8">
